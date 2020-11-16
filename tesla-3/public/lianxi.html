@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<style>
+  .transition-box {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #409EFF;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+</style>
+<body>
+	<div id="app">
+    <el-button @click="show3 = !show3">Click Me</el-button>
+
+    <div style="margin-top: 20px; height: 200px;">
+      <el-collapse-transition>
+        <div v-if="show3">
+          <div class="transition-box">
+						<ul>
+							<li><a href="#">MODEL 3</a></li>
+							<li><a href="#">MODEL S</a></li>
+							<li><a href="#">MODEL X</a></li>
+							<li><a href="#">MODEL Y</a></li>
+							<li><a href="#">MODEL 3</a></li>
+							<li><a href="#">MODEL 3</a></li>
+							<li><a href="#">MODEL 3</a></li>
+							<li ><a href="#">更多</a></li>
+						</ul>
+					</div>
+				</div>
+				<div v-else>
+          <div class="transition-box">
+						<ul>
+							<li><a href="">认证二手车</a></li>
+							<li><a href="">车辆置换</a></li>
+							<li><a href="">ROADSTER</a></li>
+							<li><a href="">ENERGY</a></li>
+							<li><a href="">大客户计划</a></li>
+							<li><a href="">金融服务</a></li>
+							<li><a href="">如何充电</a></li>
+							<li><a href="">找到我们</a></li>
+							<li><a href="">问题解答</a></li>
+							<li><a href="">在线商城</a></li>
+						</ul>
+					</div>
+          <div class="transition-box">el-collapse-transition</div>
+        </div>
+      </el-collapse-transition>
+    </div>
+	</div>
+	<script>
+   new Vue ({
+		 el:"#app",
+    data:{
+      show3: true
+    	}
+  })
+</script>
+
+</body>
+</html>
